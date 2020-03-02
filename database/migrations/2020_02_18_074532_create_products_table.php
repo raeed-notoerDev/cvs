@@ -18,6 +18,8 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->string('status');
             $table->text('properties');
+            $table->text('description')->nullable();
+            $table->string('currency')->nullable();
             $table->bigInteger('category_id');
             $table->bigInteger('user_id');
             $table->bigInteger('view_id')->nullable();

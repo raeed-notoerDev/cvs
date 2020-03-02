@@ -66,22 +66,38 @@
 </nav>
 <nav class="navbar navbar-expand-md bg-dark shadow-sm form-group">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'Laravel') }}
-        </a> ¦
-        <a class="navbar-brand" href="{{ url('/') }}">
-            عروض الإيجار
-        </a>¦
-        <a class="navbar-brand" href="{{ url('/') }}">
-            عروض البيع
-        </a>
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    {{ config('app.name', 'Laravel') }}
+                </a> ¦
+                <a class="navbar-brand" href="{{ url('/advertise') }}">
+                    عروض الإيجار و البيع
+                </a>¦
 
-        <a class="navbar-brand" href="{{ url('/job') }}">
-            فرص العمل
-        </a>
-        <a class="navbar-brand" href="{{ url('/cv') }}">
-            السير الذاتية
-        </a>
+                <a class="navbar-brand" href="{{ url('/job') }}">
+                    فرص العمل
+                </a>
+                <a class="navbar-brand" href="{{ url('/cv') }}">
+                    السير الذاتية
+                </a>
+
+{{--        <router-link class="navbar-brand" to="/">--}}
+{{--            {{ config('app.name', 'Laravel') }}--}}
+{{--        </router-link>--}}
+{{--        ¦--}}
+{{--        <router-link class="navbar-brand" to="/">--}}
+{{--            عروض الإيجار--}}
+{{--        </router-link>--}}
+{{--        ¦--}}
+{{--        <router-link class="navbar-brand" to="/advertise">--}}
+{{--            عروض البيع--}}
+{{--        </router-link>--}}
+
+{{--        <router-link class="navbar-brand" to="/job">--}}
+{{--            فرص العمل--}}
+{{--        </router-link>--}}
+{{--        <router-link class="navbar-brand" to="/cv">--}}
+{{--            السير الذاتية--}}
+{{--        </router-link>--}}
 
     </div>
 </nav>

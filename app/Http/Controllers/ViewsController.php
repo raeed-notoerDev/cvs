@@ -42,17 +42,36 @@ class ViewsController extends Controller
     public function index_advertise()
     {
         return response()->json([
-            'properties' => $this->list_properties(Product::where('status', 'active')->get())
+            'properties' => $this->list_products(Product::where('status', 'active')->get())
+        ]);
+    }
+
+    public function show_ad($id)
+    {
+        return response()->json([
+            'properties' => $this->list_properties(Product::where('status', 'active')->where('id', $id)->first())
         ]);
     }
 
     function list_properties($properties)
     {
         $myArray = [];
+        array_push($myArray, (object)[
+            'name' => $properties->name,
+            'properties' => unserialize($properties->properties),
+
+        ]);
+        return $myArray;
+    }
+
+    function list_products($properties)
+    {
+        $myArray = [];
         for ($i = 0; $i < $properties->count(); $i++) {
             array_push($myArray, (object)[
                 'name' => $properties[$i]->name,
                 'properties' => unserialize($properties[$i]->properties),
+                'id' => $properties[$i]->id
             ]);
         }
         return $myArray;

@@ -29,7 +29,7 @@ class ProductController extends Controller
         $product = Product::create([
             'name' => $request['name'],
             'status' => 'active',
-            'properties' => serialize([$request['properties']]),
+            'properties' => serialize($request['properties']),
             'category_id' => $request['category_id'],
             'user_id' => auth()->user()->id
         ]);

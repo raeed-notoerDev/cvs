@@ -37,6 +37,7 @@ Vue.component('job', require('./components/general/jobs.vue').default);
 Vue.component('cv', require('./components/general/Cv.vue').default);
 Vue.component('home-member', require('./components/cms/Home.vue').default);
 Vue.component('adv-index', require('./components/general/adv/Index.vue').default);
+Vue.component('show-ad', require('./components/general/adv/Show.vue').default);
 
 
 /**
@@ -49,6 +50,7 @@ let routes = [
     {path: '/view-job/:id', component: require('./components/job/View.vue').default, name: 'view_job'},
     {path: '/change-password', component: require('./components/ChangePassword.vue').default},
     {path: '/jobs', component: require('./components/job/JobOpportunity.vue').default},
+    // {path: '/job', component: require('./components/general/jobs.vue').default},
     {path: '/cvs', component: require('./components/Cv.vue').default},
     {path: '/notifications', component: require('./components/Message.vue').default},
     {path: '/home', component: require('./components/Home.vue').default},
@@ -56,6 +58,8 @@ let routes = [
     {path: '/create-cv', component: require('./components/CreateCv.vue').default, name: 'create-cv'},
     {path: '/create-job', component: require('./components/job/CreateOpportunity.vue').default, name: 'create-job'},
     {path: '/general_jobs', component: require('./components/general/Cv.vue').default, name: 'general_jobs'},
+    {path: '/show-ad/:id', component: require('./components/general/adv/Show.vue').default, name: 'show-ad'},
+    // {path: '/advertise', component: require('./components/general/adv/Index.vue').default},
     {path: '/cv', component: require('./components/general/Cv.vue').default},
     {path: '/create-ad', component: require('./components/general/adv/Create.vue').default},
     {path: '/member-category', component: require('./components/cms/category/Category.vue').default},
@@ -100,7 +104,8 @@ const app = new Vue({
     router,
     data() {
         return {
-            val: ''
+            val: '',
+            id:''
         }
     },
     methods: {

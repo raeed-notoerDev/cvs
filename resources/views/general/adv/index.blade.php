@@ -1,6 +1,7 @@
 @extends('layouts.general')
 @section('content')
-    <adv-index></adv-index>
+        <adv-index></adv-index>
+{{--        <router-view></router-view>--}}
 {{--    <div class="container">--}}
 {{--        <div class="row">--}}
 {{--            @foreach($ads as $ad)--}}
