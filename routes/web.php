@@ -25,6 +25,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
     Route::get('/advertise', 'ViewsController@index_adv');
     Route::get('/advertises', 'ViewsController@index_advertise');
     Route::get('/create-ad', 'ViewsController@create_ad');
+    Route::get('/show-ad/{id}', 'ViewsController@details_ad');
     Route::get('/details-ad/{id}', 'ViewsController@show_ad');
     Route::get('/ad/create/{id}', 'ProductController@show');
     Route::post('/ad/create', 'ProductController@store');

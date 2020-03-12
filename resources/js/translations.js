@@ -79,6 +79,8 @@ export const messages = {
         'create-category':'Add Category',
         'create-property':'Add Property',
         'description':'Description',
+        'create-ad':'Offers of Sale and Rent',
+        'add_adv':'Add Ad',
     },
     'fr': {
         'Hello world': 'Bonjour le monde',
@@ -165,5 +167,7 @@ export const messages = {
         'create-category':'إضافة قسم',
         'create-property':'إضافة خصائص',
         'description':'الوصف',
+        'create-ad':'عروض البيع والإيجار',
+        'add_adv':'إضافة عرض جديد',
     }
 };

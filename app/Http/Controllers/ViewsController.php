@@ -39,6 +39,11 @@ class ViewsController extends Controller
         return view('general.adv.index');
     }
 
+    public function details_ad($id)
+    {
+        return view('general.adv.details');
+    }
+
     public function index_advertise()
     {
         return response()->json([

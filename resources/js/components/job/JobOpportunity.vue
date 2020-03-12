@@ -55,11 +55,9 @@
                         {{opportunity.status}}
                     </td>
                     <td>
-
                            <router-link :to="{ name: 'view_job', params: { id: opportunity.id } }">
                                <button class=""> <i class="fas fa-eye"></i>  </button>
                            </router-link>
-
                         <button>
                             <i class="fas fa-edit"></i>
                         </button>

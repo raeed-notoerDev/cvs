@@ -40,6 +40,7 @@ Vue.component('adv-index', require('./components/general/adv/Index.vue').default
 Vue.component('show-ad', require('./components/general/adv/Show.vue').default);
 
 
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -56,15 +57,15 @@ let routes = [
     {path: '/home', component: require('./components/Home.vue').default},
     {path: '/profile', component: require('./components/Profile.vue').default},
     {path: '/create-cv', component: require('./components/CreateCv.vue').default, name: 'create-cv'},
+    {path: '/categories-ad', component: require('./components/adv/CategoriesAds.vue').default, name: 'categories-ad'},
     {path: '/create-job', component: require('./components/job/CreateOpportunity.vue').default, name: 'create-job'},
     {path: '/general_jobs', component: require('./components/general/Cv.vue').default, name: 'general_jobs'},
     {path: '/show-ad/:id', component: require('./components/general/adv/Show.vue').default, name: 'show-ad'},
-    // {path: '/advertise', component: require('./components/general/adv/Index.vue').default},
     {path: '/cv', component: require('./components/general/Cv.vue').default},
-    {path: '/create-ad', component: require('./components/general/adv/Create.vue').default},
+    {path: '/create-ad', component: require('./components/adv/Create.vue').default},
     {path: '/member-category', component: require('./components/cms/category/Category.vue').default},
     {path: '/member-property', component: require('./components/cms/category/Property.vue').default},
-    // {path: '/advertise', component: require('./components/general/adv/Index.vue').default},
+    {path: '/ads', component: require('./components/adv/Index.vue').default},
 ];
 // let general_routes = [
 //     // {path: '/jobs/:id', component: require('./components/job/View.vue').default, name: 'view_job'},
@@ -105,7 +106,7 @@ const app = new Vue({
     data() {
         return {
             val: '',
-            id:''
+            id: ''
         }
     },
     methods: {

@@ -44,11 +44,11 @@
                     </router-link>
                     <router-link class="list-group-item list-group-item-action" id="list-ad-list"
                                  data-toggle="list"
-                                 to="/create-ad" role="tab" aria-controls="profile">
+                                 to="/ads" role="tab" aria-controls="profile">
                         <h4>
                             <div class="row">
                                 <div class="col-md-2">
-                                    <i class="fa fa-user"></i>
+                                    <i class="fa fa-star"></i>
                                 </div>
                                 <div class="col">
                                     {{$t('create-ad',$i18n.locale)}}

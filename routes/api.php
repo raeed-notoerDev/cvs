@@ -22,5 +22,7 @@ Route::get('/user/opportunity/{id}', 'API\OpportunityController@show')->name('us
 Route::get('/user/opportunities', 'API\OpportunityController@index')->name('users.index.opportunities');
 Route::post('/user/opportunities', 'API\OpportunityController@store')->name('users.store.opportunities');
 Route::get('/specialization', 'API\SpecializationController@index')->name('specialization.index');
+Route::get('/user/ads', 'API\AdsController@index')->name('ads.index');
+
 
 
